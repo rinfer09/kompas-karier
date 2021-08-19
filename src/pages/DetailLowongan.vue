@@ -1,5 +1,5 @@
 <template>
-	<div class="detail-Lowongan">
+	<div class="detail-lowongan">
 		<Title class="title">
 			<h1>{{ lowongan.namaPekerjaan }}</h1>
 			<h3>{{ lowongan.kategori }} &#8226; {{ lowongan.divisi }}</h3>
@@ -55,15 +55,13 @@ export default {
 	created() {
 		this.id = this.$route.params.id;
 		this.lowongan = this.daftarLowongan.find(({ id }) => id == this.id);
-		console.log(this.lowongan);
 	},
 };
 </script>
 
 <style scoped>
-.box {
-	width: 1000px;
-	height: 500px;
+.box-kiri {
+	width: 600px;
 }
 
 .title {
@@ -78,11 +76,11 @@ export default {
 	width: 80%;
 	margin: 30px auto;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 section {
 	min-height: 300px;
-	width: 80%;
 	border-radius: 20px;
 	padding: 20px;
 }

@@ -19,6 +19,7 @@ button {
 	padding: 7px;
 	font-size: 18px;
 	color: #fff;
+	max-width: 90%;
 }
 
 button:hover {

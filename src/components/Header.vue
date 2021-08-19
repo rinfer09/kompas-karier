@@ -11,7 +11,7 @@
 			<router-link
 				active-class="nav-active"
 				class="nav-link"
-				to="/daftarlowongan?lokasi=&pekerjaan=&divisi="
+				to="/daftarlowongan"
 				>Lowongan Kerja</router-link
 			>
 		</nav>

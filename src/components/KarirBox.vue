@@ -11,7 +11,7 @@
 		<div class="section3">
 			<span class="kategori">{{ lowongan.kategori }}</span>
 		</div>
-		<Button :id="[[lowongan.id]]" @click="lihatDetailHandler">
+		<Button class="button" :id="[[lowongan.id]]" @click="lihatDetailHandler">
 			Lihat Detail
 		</Button>
 	</div>
@@ -36,6 +36,8 @@ export default {
 <style scoped>
 .karir-box {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 	padding: 30px;
 	border: solid 1px #dedede;
 	margin-bottom: 20px;
@@ -43,6 +45,8 @@ export default {
 
 .karir-box div {
 	flex: 1;
+	min-width: 200px;
+	margin-top: 30px;
 }
 
 .section2 i {
@@ -52,6 +56,10 @@ export default {
 .kategori {
 	background-color: #eeeeee;
 	border-radius: 5px;
-	padding: 12px;
+	padding: 5px 10px;
+}
+
+.button {
+	margin-top: 20px;
 }
 </style>

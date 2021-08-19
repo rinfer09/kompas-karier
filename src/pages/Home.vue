@@ -4,8 +4,17 @@
 			<h1>Jadilah Bagian Dari Perubahan Indonesia</h1>
 			<span>Bekerja dengan hati dan dedikasi bersama kami</span>
 			<div class="find">
-				<InputText v-model="pekerjaan" icon="&#xF002; pekerjaan" />
-				<InputText icon="&#xf3c5; lokasi" v-model="lokasi" />
+				<div class="inputContainer">
+					<InputText
+						class="input"
+						v-model="pekerjaan"
+						icon="&#xF002; pekerjaan"
+					/>
+				</div>
+				<div class="inputContainer">
+					<InputText class="input" icon="&#xf3c5; lokasi" v-model="lokasi" />
+				</div>
+
 				<div class="button-container">
 					<Button @click="cariHandler" width="40px" height="40px"
 						><i class="fas fa-search"></i
@@ -112,7 +121,7 @@ export default {
 	},
 	methods: {
 		lihatLowonganHandler: function(e) {
-			router.push('daftarlowongan');
+			router.push('/daftarlowongan');
 		},
 		cariHandler: function(e) {
 			router.push({
@@ -132,20 +141,35 @@ export default {
 
 .find {
 	display: flex;
+	flex-wrap: wrap;
+	flex-flow: row wrap;
+	justify-content: center;
 	margin: 20px auto 0;
-	width: 60%;
+	width: 90%;
+}
+
+.find > * {
+	margin-bottom: 10px;
+}
+
+.inputContainer {
+	margin-right: 30px;
+	width: 220px;
 }
 
 .button-container {
-	flex: 2;
+	width: 450px;
 }
 
 .button-container > * {
 	margin: 0 10px;
 }
+
 .tujuan,
 .tentang-kami {
 	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 	width: 70%;
 	margin: 0 auto;
 }
@@ -158,6 +182,7 @@ export default {
 article {
 	flex: 2;
 	padding: 40px;
+	min-width: 200px;
 }
 
 p {
@@ -167,6 +192,7 @@ p {
 
 .foto-container {
 	flex: 1;
+	text-align: center;
 }
 
 .quote-section {
